@@ -1,0 +1,47 @@
+include<stdio.h>
+#include<stdlib.h> 
+
+int main(void) 
+{
+  char str[100];
+  char word,wordmax;
+  int wordname[2]={0,0};
+  int str_num=0;
+  int i,j,k;
+  int sameword=1;
+  printf("請輸入字串:");
+  scanf("%s",&str);
+  for(i=0;i<99;i++)
+ {
+   {
+  	if(str[i]=='\0')
+  	break;  	
+  }
+  str_num+=1;
+}
+  for(j=0;j<str_num-1;j++)
+  {
+  	if(str[j]==str[j+1])
+  	{
+	sameword=sameword+1;
+  	wordname[1]=sameword;
+  	word=str[j];
+  	
+	  if(wordname[1]>wordname[0])
+  	{
+  		wordname[0]=wordname[1];
+  		wordmax=word;
+	  }
+}
+  else{
+  	sameword=1;
+  	wordname[1]=0;
+  }
+  }
+  printf("輸出的字元為");
+  for(k=0;k<wordname[0];k++)
+  printf("%c",wordmax);
+  printf("\n");
+  system("pause");
+  return 0; 
+}
